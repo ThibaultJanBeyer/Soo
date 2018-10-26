@@ -1,0 +1,42 @@
+{
+  "name": "soo",
+  "version": "1.0.0",
+  "description": "custom-elements with renderer",
+  "main": "somi.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "format": "find ./index.js | xargs prettier  --write",
+    "test": "browserify ./tests/test.js | run-headless | tap-diff"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonis2/Soo.git"
+  },
+  "keywords": [
+    "custom-elements",
+    "template-strings",
+    "shadow-dom"
+  ],
+  "author": "tonis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonis2/Soo/issues"
+  },
+  "homepage": "https://github.com/tonis2/Soo#readme",
+  "devDependencies": {
+    "browserify": "latest",
+    "prettier": "1.14.3",
+    "puppeteer": "latest",
+    "rollup": "^0.56.2",
+    "rollup-plugin-uglify": "^3.0.0",
+    "run-headless": "^2.0.1",
+    "tape": "latest",
+    "tap-diff": "^0.1.1"
+  },
+  "dependencies": {
+    "kelbas": "latest"
+  }
+}
