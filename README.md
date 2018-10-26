@@ -1,6 +1,14 @@
 # Soo
 
 ![gzip size](http://img.badgesize.io/https://unpkg.com/soo.js/build/soo.min.js?compression=gzip)
+
+### Why ?
+
+* Make easy custom-elements
+* Library size gziped 1KB
+
+
+
 ----
 ### install
 
