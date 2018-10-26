@@ -3,7 +3,7 @@ const Soo = require("../build/soo.min.js");
 
 class Test extends Soo {
   install() {
-    this.data = { name: false };
+    this.data = { name: "Works" };
   }
 
   css() {

@@ -2,7 +2,7 @@ import Soo from "../build/soo.esm.js";
 
 class Test extends Soo {
   install() {
-    this.data = { liked: false };
+    this.data = { liked: false, name: "Like me!" };
   }
 
   likeIt() {
@@ -26,7 +26,7 @@ class Test extends Soo {
     if (this.data.liked) {
       return HTML`<span>Liked</span>`;
     }
-    return HTML`<button onclick="${this.likeIt.bind(this)}">Like me!</button>`;
+    return HTML`<button onclick="${this.likeIt.bind(this)}">${this.data.name}</button>`;
   }
 }
 
