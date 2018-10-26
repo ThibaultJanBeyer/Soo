@@ -6,7 +6,7 @@
 
 * Make easy custom-elements
 * Library size gziped 1KB
-
+* No bundling needed for virtual-dom, so if using modern browsers, just import and create.
 
 
 ----
