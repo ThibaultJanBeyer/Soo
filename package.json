@@ -1,5 +1,5 @@
 {
-  "name": "soo",
+  "name": "soo.js",
   "version": "1.0.1",
   "description": "custom-elements with renderer",
   "main": "./build/soo.min.js",
