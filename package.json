@@ -1,8 +1,8 @@
 {
   "name": "soo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "custom-elements with renderer",
-  "main": "somi.js",
+  "main": "./build/soo.min.js",
   "directories": {
     "example": "example"
   },
