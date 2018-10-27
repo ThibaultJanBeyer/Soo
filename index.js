@@ -51,5 +51,5 @@ class Soo extends HTMLElement {
   beforeRender() {}
 }
 
-window.soo = Soo;
+window.Soo = Soo;
 export default Soo;
