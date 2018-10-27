@@ -14,9 +14,10 @@
 
 `npm install soo.js`
 
-or add to index.html ```HTML 
-          <script src="https://unpkg.com/soo.js"></script>
-        ```
+or add to index.html 
+```HTML
+<script src="https://unpkg.com/soo.js"></script>
+```
 
 ----
 ### usage
