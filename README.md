@@ -4,7 +4,7 @@
 
 ### Why ?
 
-* Make easy custom-elements
+* Make custom elements with easy API
 * Library size gziped 1KB
 * No bundling needed, for virtual-dom or anything else, so if using modern browsers, just plug and create.
 
