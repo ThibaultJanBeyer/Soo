@@ -1,39 +1,41 @@
-import { cssToDom } from "./helpers/dom.js"
-import "./node_modules/kelbas/index.js"
+import { cssToDom } from "./helpers/dom.js";
+import "./node_modules/kelbas/index.js";
 
 class Soo extends HTMLElement {
   constructor() {
-    super()
-    this.attachShadow({ mode: "open" })
+    super();
+    this.attachShadow({ mode: "open" });
+    this.cssApplied = false;
   }
 
   connectedCallback() {
-    this.css && this.shadowRoot.appendChild(cssToDom(this.css()))
-    this.install.apply(this)
-    this.updateDom(this.render())
+    if (this.css) {
+      this.shadowRoot.appendChild(cssToDom(this.css()));
+      this.cssApplied = true;
+    }
+    this.install.apply(this);
+    this.shadowRoot.appendChild(this.render().container);
+    this.installed();
   }
 
   disconnectedCallback() {
-    this.uninstall()
+    this.uninstall();
   }
 
   fire(name, data) {
-    this.dispatchEvent(new CustomEvent(name, { detail: data }))
+    this.dispatchEvent(new CustomEvent(name, { detail: data }));
   }
 
   updateDom(content) {
-    if (this.shadowRoot.children.length === 1) {
-      this.shadowRoot.appendChild(content.container)
-    } else {
-      this.shadowRoot.children[1].replaceWith(content.container)
-    }
+    const index = this.cssApplied ? 1 : 0;
+    this.shadowRoot.children[index].replaceWith(content);
   }
 
   update() {
-    this.beforeUpdate()
-    this.beforeRender()
-    this.updateDom(this.render())
-    this.afterUpdate()
+    this.beforeUpdate();
+    this.beforeRender();
+    this.updateDom(this.render().container);
+    this.afterUpdate();
   }
 
   install() {}
@@ -49,5 +51,5 @@ class Soo extends HTMLElement {
   beforeRender() {}
 }
 
-window.soo = Soo
-export default Soo
+window.soo = Soo;
+export default Soo;

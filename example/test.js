@@ -1,4 +1,4 @@
-import Soo from "../build/soo.esm.js";
+import Soo from "../index.js";
 
 class Test extends Soo {
   install() {
@@ -26,7 +26,9 @@ class Test extends Soo {
     if (this.data.liked) {
       return HTML`<span>Liked</span>`;
     }
-    return HTML`<button onclick="${this.likeIt.bind(this)}">${this.data.name}</button>`;
+    return HTML`<button onclick="${this.likeIt.bind(this)}">${
+      this.data.name
+    }</button>`;
   }
 }
 
