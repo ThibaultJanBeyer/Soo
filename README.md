@@ -7,7 +7,7 @@
 * Make custom elements with easy API
 * Library size gziped 1KB
 * No bundling needed, for virtual-dom or anything else, so if using modern browsers, just plug and create.
-* Has same API as [omi](https://github.com/Tencent/omi) but is great alternative if you want to create custom elements without *virtual DOM* and *store*.
+* Has same API as [omi](https://github.com/Tencent/omi) but is great alternative if you want to create custom elements without *JSX*, *virtual DOM* and *store*.
 
 
 ----
