@@ -1,6 +1,6 @@
 {
   "name": "soo.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "custom-elements with renderer",
   "main": "./build/soo.min.js",
   "directories": {
