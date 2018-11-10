@@ -1,7 +1,7 @@
 import { cssToDom } from "./helpers/dom.js";
 import "./node_modules/kelbas/index.js";
 
-class Soo extends HTMLElement {
+export default class Soo extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -52,4 +52,4 @@ class Soo extends HTMLElement {
 }
 
 window.Soo = Soo;
-export default Soo;
+

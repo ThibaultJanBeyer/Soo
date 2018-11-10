@@ -7,7 +7,7 @@ export default [
     plugins: plugins,
     output: {
       file: "build/soo.min.js",
-      format: "cjs",
+      format: "iife",
       external: ["kelbas"],
       name: "soo"
     }
