@@ -1,4 +1,3 @@
-import Soo from "../index.js";
 
 const css = `
   svg {

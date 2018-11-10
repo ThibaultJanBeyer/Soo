@@ -1,4 +1,3 @@
-import Soo from "../index.js";
 
 class Test extends Soo {
   install() {
