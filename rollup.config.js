@@ -6,7 +6,7 @@ export default [
     input: "./index.js",
     plugins: plugins,
     output: {
-      file: "build/soo.min.js",
+      file: "build/soo.iife.js",
       format: "iife",
       external: ["kelbas"],
       name: "soo"
@@ -18,6 +18,16 @@ export default [
     output: {
       file: "build/soo.esm.js",
       format: "es",
+      external: ["kelbas"],
+      name: "soo"
+    }
+  },
+  {
+    input: "./index.js",
+    plugins: plugins,
+    output: {
+      file: "build/soo.min.js",
+      format: "umd",
       external: ["kelbas"],
       name: "soo"
     }
