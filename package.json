@@ -29,14 +29,13 @@
   "devDependencies": {
     "browserify": "latest",
     "prettier": "1.14.3",
-    "puppeteer": "latest",
     "rollup": "^0.56.2",
     "rollup-plugin-uglify": "^3.0.0",
     "tape": "latest",
-    "tap-diff": "^0.1.1"
+    "tap-diff": "^0.1.1",
+    "tape-run": "^4.0.0"
   },
   "dependencies": {
-    "kelbas": "latest",
-    "tape-run": "^4.0.0"
+    "kelbas": "latest"
   }
 }
