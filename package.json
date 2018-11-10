@@ -1,8 +1,8 @@
 {
   "name": "soo.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "custom-elements with renderer",
-  "main": "./build/soo.min.js",
+  "main": "./build/soo.esm.js",
   "directories": {
     "example": "example"
   },
