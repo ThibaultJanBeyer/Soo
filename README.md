@@ -130,6 +130,7 @@ class Test extends Soo {
 | fire             | event name, payload        | fires event thats listenable from component |
 | fireGlobal       | event name, payload        | fires event thats listenable from document |
 | render           | HTML string        | return your HTML element |
+| css              | css string        | return your component style |
 
   
 ```
