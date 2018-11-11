@@ -112,7 +112,22 @@ class Test extends Soo {
                    `
     }
   }
-  
+    
   customElements.define("async-example", Test);
+  ```
+  
+  
+| Functions        | value          | Usage |
+| -------------    |:-------------: | :-----|
+| update           |         | Makes component re-render |
+| install          |         | Fires at the start of component, best place to set properties  |
+| installed        |         | Fires after component is rendered |
+| uninstall        |         | Fires after component is removed |
+| afterUpdate      |         | Fires after component is updated |
+| beforeRender     |         | Fires after component is rendered |
+| fire             | event name, payload        | fires event thats listenable from component |
+| fireGlobal       | event name, payload        | fires event thats listenable from document |
+| render           | HTML string        | return your HTML element |
+
   
 ```
