@@ -115,7 +115,9 @@ class Test extends Soo {
     
   customElements.define("async-example", Test);
   ```
+  ----
   
+  ### API explanation
   
 | Functions        | value          | Usage |
 | -------------    |:-------------: | :-----|
