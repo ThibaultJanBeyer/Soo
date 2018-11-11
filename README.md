@@ -27,6 +27,7 @@ Check live examples [here](https://tonis2.github.io/Soo/example/index.html)
 
 Example files [here](https://github.com/tonis2/Soo/tree/master/example)
 
+----
 
 Basic example
 ```js
