@@ -8,13 +8,19 @@ export default class Soo extends HTMLElement {
     this.cssApplied = false;
   }
 
-  connectedCallback() {
+  async connectedCallback() {
+
     if (this.css) {
       this.shadowRoot.appendChild(cssToDom(this.css()));
       this.cssApplied = true;
     }
     this.install.apply(this);
-    this.shadowRoot.appendChild(this.render().container);
+
+    if (this.render) {
+      const element = await this.render();
+      this.shadowRoot.appendChild(element.container);
+    }
+
     this.installed();
   }
 
@@ -26,30 +32,38 @@ export default class Soo extends HTMLElement {
     this.dispatchEvent(new CustomEvent(name, { detail: data }));
   }
 
+  fireGlobal(name, data) {
+    document.dispatchEvent(new CustomEvent(name, { detail: data }));
+  }
+
   updateDom(content) {
     const index = this.cssApplied ? 1 : 0;
     this.shadowRoot.children[index].replaceWith(content);
   }
 
-  update() {
+  async update() {
     this.beforeUpdate();
     this.beforeRender();
-    this.updateDom(this.render().container);
+
+    if (this.render) {
+      const element = await this.render();
+      this.updateDom(element.container);
+    }
+
     this.afterUpdate();
   }
 
-  install() {}
+  install() { }
 
-  installed() {}
+  installed() { }
 
-  uninstall() {}
+  uninstall() { }
 
-  beforeUpdate() {}
+  beforeUpdate() { }
 
-  afterUpdate() {}
+  afterUpdate() { }
 
-  beforeRender() {}
+  beforeRender() { }
 }
 
 window.Soo = Soo;
-

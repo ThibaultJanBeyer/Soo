@@ -1,6 +1,6 @@
 {
   "name": "soo.js",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "custom-elements with renderer",
   "main": "./build/soo.min.js",
   "directories": {
@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "format": "find ./index.js | xargs prettier  --write",
-    "test": "browserify ./tests/test.js | tape-run | tap-diff"
+    "test": "browserify ./tests/test.js | tape-run  | tap-diff"
   },
   "repository": {
     "type": "git",
@@ -31,8 +31,8 @@
     "prettier": "1.14.3",
     "rollup": "^0.56.2",
     "rollup-plugin-uglify": "^3.0.0",
-    "tape": "latest",
     "tap-diff": "^0.1.1",
+    "tape": "latest",
     "tape-run": "^4.0.0"
   },
   "dependencies": {

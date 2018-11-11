@@ -23,7 +23,7 @@ class Test extends Soo {
             }`;
   }
 
-  render() {
+  async render() {
     if (this.data.liked) {
       return HTML`<span>Liked</span>`;
     }
@@ -36,13 +36,21 @@ class Test extends Soo {
 customElements.define("like-button", Test);
 
 
-test("Should create component", t => {
-
+test("Should create component", async t => {
   const element = document.createElement("like-button");
   document.body.appendChild(element);
-  const component_selector = document.querySelector("like-button");
-  t.equal(component_selector.tagName, "LIKE-BUTTON");
-  t.equal(component_selector.shadowRoot.children.length, 2);
-  t.pass("component created correctly");
-  t.end();
+
+  element.render().then(() => {
+    t.equal(element.tagName, "LIKE-BUTTON", "Element has correct tag");
+    t.equal(element.shadowRoot.children.length, 2, "Elements created");
+    t.equal(element.shadowRoot.children[1].innerHTML, "Like me!", "Element has correct body");
+
+    element.shadowRoot.querySelector("button").click()
+
+    element.render().then(() => {
+      t.equal(element.shadowRoot.children[1].innerHTML, "Liked", "Element clicked and body updated");
+      t.pass("Component created correctly");
+      t.end();
+    })
+  })
 });
