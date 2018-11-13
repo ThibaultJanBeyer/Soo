@@ -5,15 +5,11 @@ export default class Soo extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.cssApplied = false;
   }
 
   async connectedCallback() {
+    if (this.css) this.shadowRoot.appendChild(cssToDom(this.css()));
 
-    if (this.css) {
-      this.shadowRoot.appendChild(cssToDom(this.css()));
-      this.cssApplied = true;
-    }
     this.install.apply(this);
 
     if (this.render) {
@@ -37,8 +33,7 @@ export default class Soo extends HTMLElement {
   }
 
   updateDom(content) {
-    const index = this.cssApplied ? 1 : 0;
-    this.shadowRoot.children[index].replaceWith(content);
+    this.shadowRoot.lastChild.replaceWith(content);
   }
 
   async update() {
