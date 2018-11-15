@@ -2,7 +2,7 @@
 
 ![gzip size](http://img.badgesize.io/https://unpkg.com/soo.js/build/soo.min.js?compression=gzip)
 
-<img src="https://raw.githubusercontent.com/tonis2/Soo/master/assets/CBT_OS-logo_2Color-H.png" alt="drawing" width="200"/>
+<img src="https://raw.githubusercontent.com/tonis2/Soo/master/assets/CBT_OS-logo_2Color-H.png" alt="drawing" width="300"/>
 
 ### Why ?
 
