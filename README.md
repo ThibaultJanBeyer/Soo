@@ -2,6 +2,9 @@
 
 ![gzip size](http://img.badgesize.io/https://unpkg.com/soo.js/build/soo.min.js?compression=gzip)
 
+
+![testing with](https://tonis2.github.io/Soo/assets/CBT_OS-logo_2Color-H.svg)
+
 ### Why ?
 
 * Make custom elements with easy API
