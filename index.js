@@ -11,6 +11,7 @@ export default class Soo extends HTMLElement {
     if (this.css) this.shadowRoot.appendChild(cssToDom(this.css()));
 
     this.install.apply(this);
+    this.beforeRender();
 
     if (this.render) {
       const element = await this.render();
@@ -38,8 +39,7 @@ export default class Soo extends HTMLElement {
 
   async update() {
     this.beforeUpdate();
-    this.beforeRender();
-
+    
     if (this.render) {
       const element = await this.render();
       this.updateDom(element.container);
