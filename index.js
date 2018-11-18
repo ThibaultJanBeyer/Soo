@@ -4,18 +4,20 @@ import "./node_modules/kelbas/index.js";
 export default class Soo extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    if (!this.noShadow) this.attachShadow({ mode: "open" });
   }
 
   async connectedCallback() {
-    if (this.css) this.shadowRoot.appendChild(cssToDom(this.css()));
+    this.container = this.noShadow ? this : this.shadowRoot;
+
+    if (this.css) this.container.appendChild(cssToDom(this.css()));
 
     this.install.apply(this);
     this.beforeRender();
 
     if (this.render) {
       const element = await this.render();
-      this.shadowRoot.appendChild(element.container);
+      this.container.appendChild(element.container);
     }
 
     this.installed();
@@ -34,12 +36,12 @@ export default class Soo extends HTMLElement {
   }
 
   updateDom(content) {
-    this.shadowRoot.lastChild.replaceWith(content);
+    this.container.lastChild.replaceWith(content);
   }
 
   async update() {
     this.beforeUpdate();
-    
+
     if (this.render) {
       const element = await this.render();
       this.updateDom(element.container);

@@ -8,8 +8,7 @@
   <title>Document</title>
 </head>
 
-<body style="display:grid;grid-row-gap:50px;">
-  <like-button></like-button>
+<body style="display:grid;grid-row-gap:50px; grid-template-columns:0.3fr 0.3fr 0.3fr;">
   <like-button></like-button>
 
   <time-element></time-element>
@@ -21,13 +20,18 @@
     <input type="text" placeholder="age.." name="user-age">
     <input type="text" placeholder="location.." name="user-location">
   </slot-example>
+
+  <no-shadow></no-shadow>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
 <script src="https://unpkg.com/soo.js"></script>
-<script type="module" src="./example.js"></script>
-<script type="module" src="./example2.js"></script>
+<!-- <script type="module" src="../index.js"></script> -->
+
+<script type="module" src="./like_button.js"></script>
+<script type="module" src="./clock.js"></script>
 <script type="module" src="./async.js"></script>
 <script type="module" src="./slots.js"></script>
+<script type="module" src="./no_shadow.js"></script>
 
 
 <script>
