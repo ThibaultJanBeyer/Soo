@@ -1,6 +1,4 @@
 # Soo 
-<img src="https://raw.githubusercontent.com/tonis2/Soo/master/assets/CBT_OS-logo_2Color-H.png" alt="drawing" width="300"/>
-
 
 
 ### Why ?
